@@ -1,18 +1,18 @@
 # Generate the content
 
-First Create an empty directory, e. g.:
+First create an empty directory to your _iPod_ files, e. g.:
 
     % mkdir ~/iPod
 
-Then create a directory named `music`:
+Then create a directory named `music` to _place your songs_:
 
     % mkdir ~/iPod/music
 
-Place all your music in `~/iPod/music`.
+Place all your songs in `/music`.
 
-Generate the content:
+Generate the content based on iPod directory
 
-    % docker run -u $UID -w /ipod -v ~/iPod:/ipod ipod -u -t -v /ipod
+    % docker run -u $UID -w /ipod -v ~/iPod:/ipod dmitryrck/ipod-shuffle-4g -u -t -v /ipod
 
 And *sync* all content of `~/iPod` to your iPod.
 
