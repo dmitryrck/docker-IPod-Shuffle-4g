@@ -5,7 +5,7 @@ env DEBIAN_FRONTEND noninteractive
 run sed -i '/deb-src/d' /etc/apt/sources.list && apt-get update
 
 run apt-get install --yes \
-  python git-core python-mutagen libttspico* espeak && \
+  python3 git-core python3-mutagen libttspico* espeak && \
   rm -r /var/lib/apt/lists/* && \
   find /var/cache/apt/archives -type f -iname '*.deb' -exec rm '{}' \;
 
